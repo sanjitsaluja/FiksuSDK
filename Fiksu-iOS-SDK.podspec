@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Fiksu-iOS-SDK"
-  s.version      = "4.1.0"
+  s.version      = "4.1.0.1"
   s.summary = 'This is the unofficial CocoaPod for the Fiksu iOS SDK'
   s.description = 'The Fiksu SDK provides access to Fiksu marketing programs which give you access to 99% of the worldwide mobile media and can help you generate large volumes of high quality users who monetize and drive your business model.'
   s.homepage     = "http://www.fiksu.com/"

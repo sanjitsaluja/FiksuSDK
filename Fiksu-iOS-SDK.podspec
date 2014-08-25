@@ -19,6 +19,6 @@ Pod::Spec.new do |s|
   s.framework = 'MessageUI', 'SystemConfiguration'
   s.weak_frameworks = 'AdSupport', 'StoreKit'
 
-  s.xcconfig     = { 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/FiksuSDK/**"'}
+  s.xcconfig     = { 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/Fiksu-iOS-SDK/**"'}
   s.requires_arc = true
 end

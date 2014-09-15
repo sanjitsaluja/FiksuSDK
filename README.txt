@@ -1,4 +1,4 @@
-Fiksu iOS SDK 4.1.0 (64-bit)
+Fiksu iOS SDK 4.3.1 (64-bit)
 
 This directory contains the source code required to integrate your 64-bit iOS app with
 Fiksu.

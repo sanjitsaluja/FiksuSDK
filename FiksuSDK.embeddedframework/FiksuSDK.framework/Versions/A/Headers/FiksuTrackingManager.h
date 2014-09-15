@@ -6,6 +6,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <FiksuSDK/FiksuAttributionPlugin.h>
 
 typedef enum {
   FiksuRegistrationEvent1,
@@ -23,23 +24,18 @@ typedef enum {
 
 @interface FiksuTrackingManager : NSObject
 
-+ (void)applicationDidFinishLaunching:(NSDictionary*)launchOptions;
++ (void)applicationDidFinishLaunching:(NSDictionary *)launchOptions;
 
-+ (void)setClientID:(NSString*)clientID;
-+ (NSString*)clientID;
++ (void)setClientID:(NSString *)clientID;
++ (NSString *)clientID;
 
 + (void)setAppTrackingEnabled:(BOOL)enabled;
 + (BOOL)isAppTrackingEnabled;
 
 + (BOOL)handleURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication;
 
-+ (void)uploadEvent:(NSString *)event withInfo:(NSDictionary *)eventInfo;
-
-+ (void)uploadRegistrationEvent:(NSString *)username;
 + (void)uploadRegistration:(FiksuRegistrationEvent)event;
 
-+ (void)uploadPurchaseEvent:(NSString *)username currency:(NSString *)currency;
-+ (void)uploadPurchaseEvent:(NSString *)username price:(double)price currency:(NSString *)currency;
 + (void)uploadPurchase:(FiksuPurchaseEvent)event
                  price:(double)price
               currency:(NSString *)currency;
@@ -48,4 +44,25 @@ typedef enum {
 
 + (void)displayAdInSuperview:(UIView *)superView withinFrame:(CGRect)frame;
 
++ (void)setAttributionPlugin:(NSObject<FiksuAttributionPlugin> *)plugin;
++ (NSObject<FiksuAttributionPlugin> *)attributionPlugin;
+
+@end
+
+@interface FiksuTrackingManager (Deprecated)
+
++ (void)uploadRegistrationEvent:(NSString *)username __attribute__((deprecated));
+
++ (void)uploadPurchaseEvent:(NSString *)username
+                   currency:(NSString *)currency     __attribute__((deprecated));
+
++ (void)uploadPurchaseEvent:(NSString *)username
+                      price:(double)price
+                   currency:(NSString *)currency     __attribute__((deprecated));
+@end
+
+@interface FiksuTrackingManager (Private)
+
++ (void)uploadEvent:(NSString *)event
+           withInfo:(NSDictionary *)eventInfo        __attribute__((deprecated));
 @end

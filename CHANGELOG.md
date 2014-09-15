@@ -1,3 +1,27 @@
+## v4.3.1 (32-bit: Revision 44552, 2014-09-09; 64-bit: 46552, 2014-09-09)
+
+ * Fixed problem when building with XCode 6
+
+## v4.3.0 (32-bit: Revision 44551, 2014-08-14; 64-bit: 46551, 2014-08-14)
+
+ * Added attribution plugin capability
+ * No longer inspects or reports the MAC address of the device
+
+## *v4.2.1 (32-bit: Revision 44550, 2014-07-09; 64-bit: 46550, 2014-07-09)
+
+ * Added ability to override configuration by app version
+ * Minor configuration changes
+
+## *v4.2.0 (32-bit: Revision 44549, 2014-06-24; 64-bit: 46549, 2014-06-24)
+
+ * Added new event types to Debug UI
+ * Removed URL handler verification from Debug UI
+ * Extended timeout on configuration requests
+	
+## *v4.1.1* (32-bit: Revision 44548, 2014-06-02; 64-bit: 46548, 2014-06-02)
+
+ * Minor bug fixes
+
 ## *v4.1.0* (32-bit: Revision 44547, 2014-04-08; 64-bit: 46547, 2014-04-08)
 
  * Added ability to optionally display ads
@@ -8,7 +32,25 @@
 ## *v4.0.0* (32-bit: Revision 44546, 2014-03-03; 64-bit: 46546, 2014-03-03)
 
  * Added support for cocoapods
- * Added new event types
+ * Added new event types, with the enums defined below.
+   1. `[FiksuTrackingManager uploadRegistration:(FiksuRegistrationEvent)event];`
+   2. `[FiksuTrackingManager uploadPurchase:(FiksuPurchaseEvent)event price:(double)price currency:(NSString *)currency];`
+
+```objc
+typedef enum {
+  FiksuRegistrationEvent1,
+  FiksuRegistrationEvent2,
+  FiksuRegistrationEvent3
+} FiksuRegistrationEvent;
+
+typedef enum {
+  FiksuPurchaseEvent1,
+  FiksuPurchaseEvent2,
+  FiksuPurchaseEvent3,
+  FiksuPurchaseEvent4,
+  FiksuPurchaseEvent5
+} FiksuPurchaseEvent;
+```
 
 ## *v3.7.0* (32-bit only: Revision 44545, 2013-10-22)
 

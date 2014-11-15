@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.description = 'The Fiksu SDK provides access to Fiksu marketing programs which give you access to 99% of the worldwide mobile media and can help you generate large volumes of high quality users who monetize and drive your business model.'
   s.homepage     = "http://www.fiksu.com/"
   s.license      = { :file => 'FiksuSDK.embeddedframework/Resources/LICENSE.txt', :type => 'Copyright' }
-  s.source = { :git => 'git@github.com:sanjitsaluja/FiksuSDK.git', :tag => '4.3.1' }
+  s.source = { :git => 'https://github.com/sanjitsaluja/FiksuSDK.git', :tag => '4.3.1' }
   s.author             = { "Fiksu, Inc." => "support@fiksu.com" }
   s.social_media_url = "https://twitter.com/Fiksu"
 
